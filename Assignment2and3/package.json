@@ -1,0 +1,27 @@
+{
+  "name": "my_dashboard",
+  "version": "1.0.0",
+  "description": "A backend for dashboard applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js",
+    "debug": "node --inspect-brk=9229 ./index.js"
+  },
+  "keywords": [
+    "REST",
+    "Veff213"
+  ],
+  "author": "Harpa Guðjónsdóttir",
+  "license": "ISC",
+  "dependencies": {
+    "@logtail/node": "^0.1.10",
+    "@logtail/winston": "^0.5.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.1",
+    "express-winston": "^4.2.0",
+    "winston": "^3.8.2"
+  }
+}

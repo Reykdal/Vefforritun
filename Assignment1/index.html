@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Study Dashboard</title>
+		<style>
+			.dashboard-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1rem;
+			}
+			#task-list {
+				list-style-type: none;
+				padding: 0;
+			}
+			header {
+				background-color: #0b1120;
+				color: white;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 20px;
+			}
+			.profile-section {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			.profile-section img {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+			}
+			#notes-area {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<!--<table width="100%">
+				<tr>
+					<td align="left">
+						<h1>My Study Dashboard</h1>
+					</td>
+					<td align="right">
+						<p>
+							<img src="man_3728711.png" alt="Profile picture" width="30" height="30" align="middle">
+							Jóel Arnar, Enok Reykdal
+						</p>
+					</td>
+				</tr>
+			</table>-->
+			<h1>My Study Dashboard</h1>
+
+			<div class="profile-section">
+				<img src="man_3728711.png" alt="Profile picture" width="40" height="40">
+				<span>Jóel Arnar, Enok Reykdal</span>
+			</div>
+		</header>
+		<main>
+			<div class="dashboard-grid">
+				<section class="widget">
+					<h2>Today's tasks</h2>
+					<ul id="task-list">
+						<li>
+							<input type="checkbox" id="task-1" checked>
+							<label for="task-1">Review lecture notes</label>
+						</li>
+						<li>
+							<input type="checkbox" id="task-2">
+							<label for="task-2">Work on dashboard layout</label>
+						</li>
+					</ul>
+					<form>
+						<label for="new_task">New task</label>
+						<input type="text" id="new_task" name="new_task" placeholder="Write your notes here...">
+						<button type="submit">Add task</button>
+					</form>
+					<p>The checkboxes, text field and “Add task” button show how the task list will work in assignment 2. For now they are part of the static HTML and CSS design only.</p>
+				</section>
+				<section class="widget">
+					<h2>Quick notes</h2>
+					<form>
+						<label for="notes-area">Notes</label>
+						<textarea id="notes-area" rows="5">Lab on Friday: bring laptop.
+							Ask about responsive images.
+							Try CSS variables for theme colors.</textarea>
+						<br>
+						<button type="submit">Save changes</button>
+					</form>
+					<p>You can edit the text in the notes area. The “Save changes” button is a placeholder for assignment 2 when JavaScript will save your notes.</p>
+				</section>
+
+				<section class="widget">
+					<h2>Daily quote</h2>
+					<blockquote>“We are what we repeatedly do. Excellence, then, is not an act, but a habit.”</blockquote>
+					<p>Will Durant</p>
+					<form>
+						<!--<label for="category-select">Category</label>-->
+						Category <br>
+						<select id="category-select" name="category-select">
+							<option value="general" selected>General</option>
+							<option value="productivity">Productivity</option>
+							<option value="study">Study</option>
+							<option value="creativity">Creativity</option>
+						</select>
+						<button type="submit">New quote</button>
+					</form>
+					<p>The quote and category selector are static. JavaScript will later rotate quotes and apply filters.</p>
+				</section>
+
+				<section class="widget">
+					<h2>Custom widget (optional)</h2>
+					<p>Box 4 Content</p>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>

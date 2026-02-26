@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Forms</title>
+	</head>
+	<body>
+		<form action="submitEvaluation.php" method="post" target="_blank">
+			<fieldset>
+				<legend>Personal information:</legend>
+				<label for="first_name">First name:</label>
+				<input type="text" id="first_name" name="first_name">
+				<br>
+				<label for="last_name">Last name:</label>
+				<input type="text" id="last_name" name="last_name">
+				<br>
+				<label for="ssn">Social Security Number:</label>
+				<input type="text" id="ssn" name="ssn">
+				<br>
+				Gender:<br>
+				<input type="radio" id="gender_male" value="male" name="gender">
+				Male <br>
+				<input type="radio" id="gender_female" value="female" name="gender">
+				Female
+				<br>
+				<input type="radio" id="gender_other" value="other" name="gender" checked>
+				Other
+				<br>
+			</fieldset>
+			<fieldset>
+				<legend>Course context:</legend>
+				<label for="university">University</label>
+				<input type="text" id="university" name="university" value="RU" disabled>
+				<br>
+				<label for="schools">School:</label>
+				<select id="schools" name="schools" disabled>
+					<option value="computer_science" selected>
+						Computer Science
+					</option>
+					<option value="mathematics">Mathematics</option>
+					<option value="physics">Physics</option>
+				</select>
+				<br><label for="course_name">Course:</label>
+				<input type="text" id="course_name" name="course_name" value="T-213-VEFF" disabled>
+			</fieldset>
+			<fieldset>
+				<legend>Which lectures did you attend?</legend>
+				<input type="checkbox" id="lecture1" name="lecture1">
+				L1:
+				Introduction <br>
+				<input type="checkbox" id="lecture2" name="lecture2">
+				L2:
+				Networks<br>
+				<input type="checkbox" id="lecture3" name="lecture3">
+				L3: HTML
+				I<br>
+			</fieldset>
+			<fieldset>
+				<legend>
+					Please describe your overall impression of the course
+				</legend>
+				<textarea rows="10" cols="50" id="impression" name="impression">
+					My impression of this course is...
+				</textarea>
+			</fieldset>
+			<input type="submit" value="Submit Evaluation">
+		</form>
+	</body>
+</html>

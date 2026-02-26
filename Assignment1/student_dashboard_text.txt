@@ -1,0 +1,34 @@
+Study Dashboard
+My Study Dashboard
+
+Harpa [REPLACE WITH YOUR NAMES (comma separated)]
+
+Today´s tasks
+Review lecture notes
+Work on dashboard layout
+New task
+Write a new task here...
+Add task
+The checkboxes, text field and “Add task” button show how the task list will work in assignment 2. For now they are part of the static HTML and CSS design only.
+
+Quick Notes
+Notes
+Write your notes here...
+Lab on Friday: bring laptop.
+Ask about responsive images.
+Try CSS variables for theme colors.
+Save changes
+You can edit the text in the notes area. The “Save changes” button is a placeholder for assignment 2 when JavaScript will save your notes.
+
+Daily quote
+“We are what we repeatedly do. Excellence, then, is not an act, but a habit.”
+Will Durant
+Category
+General
+Productivity
+Study
+Creativity
+New quote
+The quote and category selector are static. JavaScript will later rotate quotes and apply filters.
+
+This website requires at least 600px screen width.
