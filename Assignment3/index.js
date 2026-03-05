@@ -42,6 +42,15 @@ const basePath = `${apiPath}${version}`;
 
 -------------------------- */
 app.get(`${basePath}/events`, (req, res) => {
+  const allowed = ["name", "location"];
+  const keys = Object.keys(req.query);
+
+  if (keys.some((k) => !allowed.includes(k))) {
+    return res.status(400).json({
+      message: "Incorrect query input. Only name and location are allowed.",
+    });
+  }
+
   let result = events;
 
   const { name, location } = req.query;
@@ -53,7 +62,7 @@ app.get(`${basePath}/events`, (req, res) => {
 
   if (location) {
     const l = String(location).toLowerCase();
-    result = result.filter((e) => String(e.name).toLowerCase().includes(l))
+    result = result.filter((e) => String(e.location).toLowerCase().includes(l))
   }
 
   return res.status(200).json(result)
@@ -63,7 +72,7 @@ app.get(`${basePath}/events/:eventId`, (req, res) => {
   const id = Number(req.params.eventId);
 
   if (!Number.isInteger(id)) {
-    return res.status(400).json({ message: "id must be a number." });
+    return res.status(400).json({ message: "id must be a integer." });
   }
 
   const event = events.find((e) => e.id === id);
